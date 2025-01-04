@@ -5,7 +5,7 @@ namespace JanTaskTracker.Server.Models
     {
         Task<IEnumerable<DepartmentDTO>> GetAllDepartmentsAsync();
         Task<DepartmentDTO> GetDepartmentByIdAsync(int id);
-        Task AddDepartmentAsync(DepartmentDTO departmentDto);
+        Task CreateDepartmentAsync(DepartmentDTO departmentDto);
         Task UpdateDepartmentAsync(DepartmentDTO departmentDto);
         Task DeleteDepartmentAsync(int id);
     }

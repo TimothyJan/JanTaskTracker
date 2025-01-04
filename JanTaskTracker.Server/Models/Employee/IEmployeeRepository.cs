@@ -1,13 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-
-namespace JanTaskTracker.Server.Models
+﻿namespace JanTaskTracker.Server.Models
 {
     public interface IEmployeeRepository
     {
         Task<IEnumerable<EmployeeDTO>> GetAllEmployeesAsync();
         Task<EmployeeDTO> GetEmployeeByIdAsync(int id);
-        Task AddEmployeeAsync(EmployeeDTO employeeDto);
+        Task CreateEmployeeAsync(EmployeeDTO employeeDto);
         Task UpdateEmployeeAsync(EmployeeDTO employeeDto);
         Task DeleteEmployeeAsync(int id);
     }

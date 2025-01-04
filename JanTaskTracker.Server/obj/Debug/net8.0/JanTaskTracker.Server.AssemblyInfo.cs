@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JanTaskTracker.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1060272ced2e44d1b5e1f066b168c8c28a48d64e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2195b981c756bfd71c524e9236a74630995a3dcb")]
 [assembly: System.Reflection.AssemblyProductAttribute("JanTaskTracker.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JanTaskTracker.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -34,7 +34,7 @@ namespace JanTaskTracker.Server.Models
             };
         }
 
-        public async Task AddDepartmentAsync(DepartmentDTO departmentDto)
+        public async Task CreateDepartmentAsync(DepartmentDTO departmentDto)
         {
             var department = new Department
             {

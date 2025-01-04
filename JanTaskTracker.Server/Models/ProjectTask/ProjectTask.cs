@@ -1,5 +1,4 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace JanTaskTracker.Server.Models
@@ -24,7 +23,7 @@ namespace JanTaskTracker.Server.Models
         [StringLength(50, ErrorMessage = "Status cannot exceed 50 characters.")]
         public string Status { get; set; }
 
-        [ForeignKey("User")]
+        [ForeignKey("Employee")]
         public int AssignedEmployeeId { get; set; }
 
         [Required]

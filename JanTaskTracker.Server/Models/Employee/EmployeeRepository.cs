@@ -1,6 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace JanTaskTracker.Server.Models
 {
@@ -20,7 +18,6 @@ namespace JanTaskTracker.Server.Models
                 {
                     EmployeeID = e.EmployeeID,
                     Name = e.Name,
-                    Position = e.Position,
                     Salary = e.Salary,
                     DepartmentID = e.DepartmentID,
                     RoleID = e.RoleID
@@ -37,19 +34,17 @@ namespace JanTaskTracker.Server.Models
             {
                 EmployeeID = employee.EmployeeID,
                 Name = employee.Name,
-                Position = employee.Position,
                 Salary = employee.Salary,
                 DepartmentID = employee.DepartmentID,
                 RoleID = employee.RoleID
             };
         }
 
-        public async Task AddEmployeeAsync(EmployeeDTO employeeDto)
+        public async Task CreateEmployeeAsync(EmployeeDTO employeeDto)
         {
             var employee = new Employee
             {
                 Name = employeeDto.Name,
-                Position = employeeDto.Position,
                 Salary = employeeDto.Salary,
                 DepartmentID = employeeDto.DepartmentID,
                 RoleID = employeeDto.RoleID
@@ -64,7 +59,6 @@ namespace JanTaskTracker.Server.Models
             if (employee == null) return;
 
             employee.Name = employeeDto.Name;
-            employee.Position = employeeDto.Position;
             employee.Salary = employeeDto.Salary;
             employee.DepartmentID = employeeDto.DepartmentID;
             employee.RoleID = employeeDto.RoleID;

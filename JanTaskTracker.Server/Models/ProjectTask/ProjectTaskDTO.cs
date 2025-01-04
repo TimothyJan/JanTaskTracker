@@ -1,4 +1,4 @@
-﻿namespace JanTaskTracker.Server.DTOs
+﻿namespace JanTaskTracker.Server.Models
 {
     public class ProjectTaskDTO
     {

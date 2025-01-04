@@ -26,6 +26,8 @@ namespace JanTaskTracker.Server.Models
                 .HasForeignKey(e => e.RoleID)
                 .OnDelete(DeleteBehavior.Restrict); // Prevent cascading deletes for Roles
 
+            modelBuilder.Entity<Employee>().Property(e => e.Salary).HasColumnType("decimal(18, 2)");
+
             modelBuilder.Entity<Role>()
                 .HasOne(r => r.Department)
                 .WithMany(d => d.Roles) // Ensure Department has navigation property for Roles

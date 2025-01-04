@@ -1,6 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace JanTaskTracker.Server.Models
 {
@@ -38,7 +36,7 @@ namespace JanTaskTracker.Server.Models
             };
         }
 
-        public async Task AddRoleAsync(RoleDTO roleDto)
+        public async Task CreateRoleAsync(RoleDTO roleDto)
         {
             var role = new Role
             {

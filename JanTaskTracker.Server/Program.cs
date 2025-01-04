@@ -1,13 +1,39 @@
+
+using Microsoft.EntityFrameworkCore;
+using JanTaskTracker.Server.Models;
+using JanTaskTracker.Server.Repositories;
+using JanTaskTracker.Server.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngularApp", policy =>
+    {
+        policy.WithOrigins("https://127.0.0.1:4200") // Allow the Angular app to make requests
+              .AllowAnyMethod() // Allow any HTTP method (GET, POST, etc.)
+              .AllowAnyHeader(); // Allow any headers in the requests
+    });
+});
+
 // Add services to the container.
+// Register DbContext with retry policy for transient fault handling
+builder.Services.AddDbContext<JanTaskTrackerDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Register repositories and services for dependency injection
+builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
+builder.Services.AddScoped<IProjectTaskRepository, ProjectTaskRepository>();
+builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.UseCors("AllowAngularApp");
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
@@ -20,11 +46,22 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.MapFallbackToFile("/index.html");
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    try
+    {
+        SeedData.Initialize(services);
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"An error occurred seeding the DB: {ex.Message}");
+    }
+}
 
 app.Run();

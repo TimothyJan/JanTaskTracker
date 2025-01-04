@@ -3,6 +3,42 @@ Full-stack task and employee management app with CRUD functionality for projects
 
 Process:
 <ul>
+  <li>SQL Server Management Studio
+    <ul>
+      <li>Connect to Server
+        <ul>
+          <li>Server Type: Database Engine</li>
+          <li>Server Name: localhost</li>
+          <li>Authentication: Windows Authentication</li>
+          <li>Connect</li>
+        </ul>
+      </li>
+      <li>Create a new Database
+        <ul>
+          <li>In the <strong>Object Explorer</strong>, right-click on Databases and select <strong>New Database</strong></li>
+          <li>Database Name: TaskTrackrDb</li>
+        </ul>
+      </li>
+      <li>Configure a User
+        <ul>
+          <li>Expand the <strong>Security</strong> node.</li>
+          <li>Right-click <strong>Logins</strong> and select <strong>New Login</strong></li>
+          <li>In the <strong>Login - New</strong> dialog:
+            <ul>
+              <li>Login Name: Enter a username</li>
+              <li>Authentication: Choose SQL Server Authentication and set a password.</li>
+            </ul>
+          </li>
+          <li>In the left panel, go to <strong>User Mapping</strong>, check your database (TaskTrackrDb), and assign the db_owner role.</li>
+        </ul>
+      </li>
+      <li>Configure the Connection String in appsettings.json
+        <ul>
+          <li><code>"DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=TaskTrackrDb;Trusted_Connection=True;"</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
   <li>Create ASP.NET Core API
     <ul>
       <li>Add Required NuGet Packages
@@ -26,6 +62,27 @@ Process:
           <li>Restrict delete behavior to prevent cascading deletes for roles and departments.</li>
         </ul>
       </li>
+      <li>Create Controllers for each Model.</li>
+      <li>Configure Program.cs to use connection string to SQL Server</li>
+      <li>Create migrations and apply to the database to create tables
+        <ul>
+          <li>Add Migration: ~<code>dotnet ef migrations add InitialCreate</code></li>
+          <li>Apply Migration: ~<code>dotnet ef database update</code></li>
+        </ul>
+      </li>
+      <li>Seed database with dummy data
+        <ul>
+          <li>Create SeedData.cs.</li>
+          <li>Modify Program.cs to call the <code>SeedData.Initialize</code> method during application startup.</li>
+          <li>Add migrations and apply to the database to create tables
+            <ul>
+              <li>Add Migration: ~<code>dotnet ef migrations add SeedDataMigration</code></li>
+              <li>Apply Migration: ~<code>dotnet ef database update</code></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Test all methods on Swagger.</li>
       <li></li>
     </ul>
   </li>

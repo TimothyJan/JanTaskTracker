@@ -1,16 +1,14 @@
 ﻿using JanTaskTracker.Server.Models;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace JanTaskTracker.Server.Repositories
 {
     public interface IProjectTaskRepository
     {
-        Task<IEnumerable<ProjectTask>> GetAllTasksAsync();
-        Task<ProjectTask> GetTaskByIdAsync(int id);
-        Task CreateTaskAsync(ProjectTask task);
-        Task<bool> UpdateTaskAsync(ProjectTask task);
-        Task<bool> DeleteTaskAsync(int id);
-        Task<IEnumerable<int>> GetTaskIdsByProjectIdAsync(int projectId);
+        Task<IEnumerable<ProjectTaskDTO>> GetAllProjectTasksAsync();
+        Task<ProjectTaskDTO> GetProjectTaskByIdAsync(int id);
+        Task CreateProjectTaskAsync(ProjectTaskDTO task);
+        Task<bool> UpdateProjectTaskAsync(ProjectTaskDTO task);
+        Task<bool> DeleteProjectTaskAsync(int id);
+        Task<IEnumerable<int>> GetProjectTaskIdsByProjectIdAsync(int projectId);
     }
 }

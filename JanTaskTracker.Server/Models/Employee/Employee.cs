@@ -13,10 +13,6 @@ namespace JanTaskTracker.Server.Models
         public string Name { get; set; }
 
         [Required]
-        [StringLength(50, ErrorMessage = "Position name cannot exceed 50 characters.")]
-        public string Position { get; set; }
-
-        [Required]
         [DataType(DataType.Currency)]
         public decimal Salary { get; set; }
 
