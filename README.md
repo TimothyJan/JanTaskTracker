@@ -80,9 +80,22 @@ Process:
               <li>Apply Migration: ~<code>dotnet ef database update</code></li>
             </ul>
           </li>
+          <li>Clean and Recreate Database (Development Only)
+            <ul>
+              <li>~<code>dotnet ef database drop</code></li>
+              <li>~<code>dotnet ef migrations remove</code></li>
+              <li>~<code>dotnet ef migrations add InitialCreate</code></li>
+              <li>~<code>dotnet ef database update</code></li>
+            </ul>
+          </li>
         </ul>
       </li>
-      <li>Test all methods on Swagger.</li>
+      <li>Test all methods on Swagger.
+      </li>
+    </ul>
+  </li>
+  <li>Frontend
+    <ul>
       <li></li>
     </ul>
   </li>

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using JanTaskTracker.Server.Models;
 
-namespace JanTaskTracker.Server.Models
+namespace JanTaskTracker.Server
 {
     public class JanTaskTrackerDbContext: DbContext
     {
@@ -14,6 +15,8 @@ namespace JanTaskTracker.Server.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<Employee>()
                 .HasOne(e => e.Department)
                 .WithMany(d => d.Employees) // Navigation property for Employees
@@ -54,6 +57,9 @@ namespace JanTaskTracker.Server.Models
                       .HasForeignKey(e => e.AssignedEmployeeId)
                       .OnDelete(DeleteBehavior.Restrict);
             });
+
+            // Seed data
+            SeedData.ApplySeedData(modelBuilder);
         }
     }
 }

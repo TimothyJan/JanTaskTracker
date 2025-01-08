@@ -1,8 +1,8 @@
 
 using Microsoft.EntityFrameworkCore;
+using JanTaskTracker.Server;
 using JanTaskTracker.Server.Models;
 using JanTaskTracker.Server.Repositories;
-using JanTaskTracker.Server.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,7 +18,8 @@ builder.Services.AddCors(options =>
 
 // Add services to the container.
 // Register DbContext with retry policy for transient fault handling
-builder.Services.AddDbContext<JanTaskTrackerDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<JanTaskTrackerDbContext>(options => 
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")).EnableSensitiveDataLogging());
 
 // Register repositories and services for dependency injection
 builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
@@ -35,12 +36,12 @@ var app = builder.Build();
 
 app.UseCors("AllowAngularApp");
 
-app.UseDefaultFiles();
-app.UseStaticFiles();
+//app.UseDefaultFiles();
+//app.UseStaticFiles();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI();
 }
