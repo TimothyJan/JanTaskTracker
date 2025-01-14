@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{6A3283EC-4FCF-42B5-99DA-3627B94CC0D6}|JanTaskTracker.Server\\JanTaskTracker.Server.csproj|solutionrelative:jantasktracker.server\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A3283EC-4FCF-42B5-99DA-3627B94CC0D6}|JanTaskTracker.Server\\JanTaskTracker.Server.csproj|c:\\users\\janti\\onedrive\\documents\\github\\jantasktracker\\jantasktracker.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A3283EC-4FCF-42B5-99DA-3627B94CC0D6}|JanTaskTracker.Server\\JanTaskTracker.Server.csproj|solutionrelative:jantasktracker.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6A3283EC-4FCF-42B5-99DA-3627B94CC0D6}|JanTaskTracker.Server\\JanTaskTracker.Server.csproj|c:\\users\\janti\\onedrive\\documents\\github\\jantasktracker\\jantasktracker.server\\models\\jantasktrackerdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A3283EC-4FCF-42B5-99DA-3627B94CC0D6}|JanTaskTracker.Server\\JanTaskTracker.Server.csproj|solutionrelative:jantasktracker.server\\models\\jantasktrackerdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3283EC-4FCF-42B5-99DA-3627B94CC0D6}|JanTaskTracker.Server\\JanTaskTracker.Server.csproj|c:\\users\\janti\\onedrive\\documents\\github\\jantasktracker\\jantasktracker.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A3283EC-4FCF-42B5-99DA-3627B94CC0D6}|JanTaskTracker.Server\\JanTaskTracker.Server.csproj|solutionrelative:jantasktracker.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +38,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanTaskTracker\\JanTaskTracker.Server\\Program.cs",
               "RelativeDocumentMoniker": "JanTaskTracker.Server\\Program.cs",
@@ -46,21 +46,7 @@
               "RelativeToolTip": "JanTaskTracker.Server\\Program.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAADsAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-08T18:10:05.818Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "JanTaskTrackerDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanTaskTracker\\JanTaskTracker.Server\\Models\\JanTaskTrackerDbContext.cs",
-              "RelativeDocumentMoniker": "JanTaskTracker.Server\\Models\\JanTaskTrackerDbContext.cs",
-              "ToolTip": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanTaskTracker\\JanTaskTracker.Server\\Models\\JanTaskTrackerDbContext.cs",
-              "RelativeToolTip": "JanTaskTracker.Server\\Models\\JanTaskTrackerDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-08T17:39:48.73Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-08T18:10:05.818Z"
             },
             {
               "$type": "Document",
@@ -70,9 +56,22 @@
               "RelativeDocumentMoniker": "JanTaskTracker.Server\\SeedData.cs",
               "ToolTip": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanTaskTracker\\JanTaskTracker.Server\\SeedData.cs",
               "RelativeToolTip": "JanTaskTracker.Server\\SeedData.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAiwBIAAABTAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAiwA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-04T00:34:21.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "JanTaskTrackerDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanTaskTracker\\JanTaskTracker.Server\\Models\\JanTaskTrackerDbContext.cs",
+              "RelativeDocumentMoniker": "JanTaskTracker.Server\\Models\\JanTaskTrackerDbContext.cs",
+              "ToolTip": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanTaskTracker\\JanTaskTracker.Server\\Models\\JanTaskTrackerDbContext.cs",
+              "RelativeToolTip": "JanTaskTracker.Server\\Models\\JanTaskTrackerDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T17:39:48.73Z",
               "EditorCaption": ""
             }
           ]
