@@ -1,0 +1,89 @@
+/* Card Styling */
+.card {
+  background-color: var(--card-background-color);
+  border: 1px solid var(--card-border-color);
+  border-radius: 12px;
+  padding: 16px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Button Styling */
+.btn {
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.btn-primary {
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color-hover);
+}
+
+.btn-success {
+  background-color: var(--quaternary-color);
+  color: #fff;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: var(--quaternary-color-hover);
+}
+
+.btn-danger {
+  background-color: var(--tertiary-color);
+  color: #fff;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: var(--tertiary-color-hover);
+}
+
+/* Badge Styling */
+.badge {
+  font-size: 0.85rem;
+  padding: 0.4em 0.6em;
+}
+
+.badge.bg-info {
+  background-color: #e2d3d9;
+  color: white;
+}
+
+/* Input and Textarea Styling */
+input.form-control,
+textarea.form-control {
+  border: 1px solid #d5d2cf;
+  border-radius: 8px;
+  background-color: #fdfbf8;
+}
+
+input.form-control:focus,
+textarea.form-control:focus {
+  border-color: #99bfa6;
+  box-shadow: 0 0 0 0.2rem rgba(153, 191, 166, 0.25);
+}
+
+/* List Group Styling */
+.list-group-item {
+  background-color: #f7f2ef;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.list-group-item:hover {
+  background-color: #ebe7e4;
+}

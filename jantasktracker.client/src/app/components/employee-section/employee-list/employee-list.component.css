@@ -1,0 +1,64 @@
+
+.employee-container {
+  background-color: var(--card-background-color);
+  border: 1px solid var(--card-border-color);
+  border-radius: 12px;
+  padding: 16px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.table thead th {
+  color: #908c8c;
+  border-bottom: 2px solid #8f94fb;
+}
+
+.table tbody tr {
+  color: #ffffff;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+/* Button styling */
+.action-button {
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.action-button-edit {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.action-button-edit:hover {
+  background-color: var(--primary-color-hover);
+}
+
+.action-button-submit {
+  background-color: var(--quaternary-color);
+  color: #fff;
+}
+
+.action-button-submit:hover {
+  background-color: var(--quaternary-color-hover);
+}
+
+.action-button-delete {
+  background-color: var(--tertiary-color);
+  color: #fff;
+}
+
+.action-button-delete:hover {
+  background-color: var(--tertiary-color-hover);
+}

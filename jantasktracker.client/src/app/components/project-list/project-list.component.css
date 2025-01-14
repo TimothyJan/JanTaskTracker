@@ -1,0 +1,19 @@
+.btn {
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.btn-primary {
+  background-color: var(--secondary-color);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color-hover);
+}
+
+.modal-content {
+  background-color: #fdfbf8;
+  border-radius: 10px;
+}
